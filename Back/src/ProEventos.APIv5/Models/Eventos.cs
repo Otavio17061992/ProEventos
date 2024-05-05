@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProEventos.APIv5.Models
 {
+    [Keyless]
     public class Eventos
     {
         public int EventoId { get; set; }
