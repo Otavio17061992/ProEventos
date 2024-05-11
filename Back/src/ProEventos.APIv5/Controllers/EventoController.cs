@@ -30,9 +30,9 @@ namespace ProEventos.APIv5.Controllers
 
         // retorna evento com base no ID
         [HttpGet("{id}")]
-        public IEnumerable<Eventos> Get(int id)
+        public Eventos Get(int id)
         {
-            return  _context.Eventos.Where(e => e.EventoId == id);
+            return  _context.Eventos.FirstOrDefault(e => e.EventoId == id);
         }
 
         [HttpPost]
