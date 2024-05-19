@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProEventos.APIv5.Data;
 
+#nullable disable
+
 namespace ProEventos.APIv5.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
@@ -12,30 +14,34 @@ namespace ProEventos.APIv5.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.2");
+            modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
 
             modelBuilder.Entity("ProEventos.APIv5.Models.Eventos", b =>
                 {
                     b.Property<string>("DataEvento")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("EventoId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ImagemURL")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Local")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Lote")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("QtdPessoas")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Tema")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.ToTable("Eventos");

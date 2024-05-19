@@ -29,7 +29,7 @@ namespace ProEventos.APIv5
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(
-                context => context.UseSqlite(Configuration.GetConnectionString("Default"))
+                context => context.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
             );
             services.AddControllers();
             services.AddCors();
