@@ -18,10 +18,10 @@
 				"mssql.connections": [
 					{
 						"server": "localhost,1433",
-						"database": "",
+						"database": "dataBaseContainer",
 						"authenticationType": "SqlLogin",
 						"user": "sa",
-						"password": "P@ssw0rd",
+						"password": "123456",
 						"emptyPasswordInput": false,
 						"savePassword": false,
 						"profileName": "mssql-container"
