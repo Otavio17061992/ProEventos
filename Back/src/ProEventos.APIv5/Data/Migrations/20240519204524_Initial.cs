@@ -5,7 +5,7 @@
 namespace ProEventos.APIv5.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -14,13 +14,13 @@ namespace ProEventos.APIv5.Data.Migrations
                 name: "Eventos",
                 columns: table => new
                 {
-                    EventoId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Local = table.Column<string>(type: "TEXT", nullable: false),
-                    DataEvento = table.Column<string>(type: "TEXT", nullable: false),
-                    Tema = table.Column<string>(type: "TEXT", nullable: false),
-                    QtdPessoas = table.Column<int>(type: "INTEGER", nullable: false),
-                    Lote = table.Column<string>(type: "TEXT", nullable: false),
-                    ImagemURL = table.Column<string>(type: "TEXT", nullable: false)
+                    EventoId = table.Column<int>(type: "int", nullable: false),
+                    Local = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DataEvento = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Tema = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    QtdPessoas = table.Column<int>(type: "int", nullable: false),
+                    Lote = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImagemURL = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
