@@ -9,12 +9,5 @@ RUN bash ./installSQLtools.sh \
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
-# Instale o EF 7
-RUN dotnet tool install --global dotnet-ef --version 7.0.0
-
-# Instale o Node.js versão 14
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
-    && apt-get install -y nodejs
-
-
-RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && nvm install 14 && nvm use 14 && npm install -g @angular/cli@12" 2>&1
+# [Optional] Uncomment this line to install global node packages.
+# RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
