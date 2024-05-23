@@ -11,7 +11,7 @@ using ProEventos.APIv5.Data;
 namespace ProEventos.APIv5.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240519204524_Initial")]
+    [Migration("20240523032602_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
