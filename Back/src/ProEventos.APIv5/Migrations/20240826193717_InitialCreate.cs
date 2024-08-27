@@ -2,12 +2,10 @@
 
 #nullable disable
 
-namespace ProEventos.APIv5.Data.Migrations
+namespace ProEventos.APIv5.Migrations
 {
-    /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -27,7 +25,6 @@ namespace ProEventos.APIv5.Data.Migrations
                 });
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
