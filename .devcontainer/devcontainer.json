@@ -50,7 +50,7 @@
 	"postCreateCommand": "bash .devcontainer/mssql/postCreateCommand.sh 'P@ssw0rd' './bin/Debug/' './.devcontainer/mssql/'",
 	"features": {
 		"ghcr.io/devcontainers/features/dotnet:2": {},
-		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/node:2": {},
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
 	},
 
